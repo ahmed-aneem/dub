@@ -155,7 +155,7 @@ export async function processPayouts({
     payoutFee: workspace.payoutFee,
   });
 
-  if (!payoutFee) {
+  if (payoutFee == null) {
     throw new Error("Failed to calculate payout fee.");
   }
 
